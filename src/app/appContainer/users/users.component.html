@@ -1,0 +1,9 @@
+<h2 style="text-align: center">Users Component</h2>
+
+<ul *ngIf="usersList">
+  <li *ngFor="let users of usersList">
+    {{users.firstName}} {{users.lastName}} - {{users.username}}
+  </li>
+</ul>
+
+<p *ngIf="!usersList">Loading...</p>

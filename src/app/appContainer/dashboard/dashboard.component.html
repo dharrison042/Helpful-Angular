@@ -1,0 +1,38 @@
+<h2 style="text-align: center">Dashboard? 🤔</h2>
+
+<div id="chartType" style="text-align: center">
+  <button type="button" class="btn btn-primary" (click)="makePolar()">Polar</button>
+  &nbsp;
+  <button type="button" class="btn btn-primary" (click)="makeDoughnut()">Doughnut</button>
+  &nbsp;
+  <button type="button" class="btn btn-primary" (click)="makePie()">Pie</button>
+  &nbsp;
+  <button type="button" class="btn btn-primary" (click)="makeBar()">Bar</button>
+</div>
+
+&nbsp;
+
+<div id="changeValues" style="text-align: center">
+  <button type="button" class="btn btn-primary" (click)="modifyFoo(100)">+100 Poo</button>
+
+  <button type="button" class="btn btn-danger" (click)="modifyFoo(-100)">-100 Poo</button>
+  &nbsp;
+  &nbsp;
+  <button type="button" class="btn btn-primary" (click)="modifyBar(100)">+100 Bar</button>
+
+  <button type="button" class="btn btn-danger" (click)="modifyBar(-100)">-100 Bar</button>
+  &nbsp;
+  &nbsp;
+  <button type="button" class="btn btn-primary" (click)="modifySomethingElse(100)">+100 Something Else</button>
+
+  <button type="button" class="btn btn-danger" (click)="modifySomethingElse(-100)">-100 Something Else</button>
+</div>
+
+<div id="chartContainer">
+  <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
